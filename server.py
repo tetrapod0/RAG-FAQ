@@ -287,7 +287,42 @@ rag_chain = st.session_state['rag_chain']
 
 ##########################################################################################
 # 제목
-st.title(TITLE)
+# st.title(TITLE)
+
+# background_image = """
+# <style>
+# [data-testid="stAppViewContainer"] > .main {
+#     background-image: url("https://help.nexon.com/image/FrontConfig/18/427de99a48874673b62f87359f847cb3.jpg");
+#     background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
+#     background-position: center;  
+#     background-repeat: no-repeat;
+# }
+# </style>
+# """
+
+# st.markdown(background_image, unsafe_allow_html=True)
+
+title_html = """
+    <style>
+        .title {
+            padding: 20px;
+            background-image: url('https://help.nexon.com/image/FrontConfig/18/427de99a48874673b62f87359f847cb3.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            text-shadow: 
+                -1.5px -1.5px 0 #000,
+                1.5px -1.5px 0 #000,
+                -1.5px 1.5px 0 #000,
+                1.5px 1.5px 0 #000;
+        }
+    </style>
+    <h1 class="title">%s</h1>
+""" % TITLE
+
+# HTML/CSS를 사용하여 제목 표시
+st.markdown(title_html, unsafe_allow_html=True)
+
 
 # 채팅 내역 출력
 for msg in messages:
