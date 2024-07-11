@@ -6,28 +6,28 @@ matplotlib
 seaborn
 tqdm
 
-transformers
-accelerate
+# transformers
+# accelerate
 
 langchain
 langchain_openai
 langchain_community
 langchainhub
-sentence_transformers
+# sentence_transformers
 faiss-cpu
 # faiss-gpu
-chromadb
-pypdf
-unstructured
+# chromadb
+# pypdf
+# unstructured
 
-langserve
+# langserve
 fastapi
 uvicorn
 sse_starlette
 pydantic==1.10.13
 streamlit
 
-selenium
+# selenium
 
 jupyter
 
